@@ -34,13 +34,32 @@
 - a crash dump file allows the admin or analysts to understand what went wrong during the crash
 
 ## Change UAC Settings
-#### System Tools
+- there are four levels/categories of UAC settings:
+  1. Always Notify: windows notifies you when any apps or you try to make any changes to desktop dims
+  2. Notify for Apps: Windows notifies you whenever apps try to make changes but not you (the default setting)
+  3. same as Notify for Apps, but the screen does not dim
+  4. Never Notify: Windows doesn't notify you ever
 
-#### Storage
-
-#### Services and Applications
+- You can find the current level by looking in the **User Account Control Settings** window
 
 ## Computer Management
+- user **compmgmt** to access the Computer Management panel
+#### System Tools
+- view scehduled tasks by clicking on **Task Scheduler Library**
+- Event viewer lets us view events that have occured on the computer
+- There are 5 types of events that can be logged:
+  1. Error
+  2. Warning
+  3. Information
+  4. Success Audit
+  5. Failure Audit
+
+#### Storage
+- Can find options for **Windows Server Backup** and **Disk Management**
+
+#### Services and Applications
+- allows you to click on different services and see their names, status, etc
+- additional detail found in **properties** (right-click)
 
 ## System Information
 
@@ -59,8 +78,24 @@
    **A: Windows User**
    EXPLANATION: search bar-> msconfig -> tools -> About Windows -> Launch -> Windows User (at the bottom)
 3. What is the command for Windows Troubleshooting
+   **A: C:\Windows\System32\control.exe /name Microsoft.Troubleshooting**
+   EXPLANATION: search bar -> msconfig -> tools -> Windows Troubleshooting -> command
+4. What command will open the control Panel? (the .exe not the full path)
+   **A: control.exe**
+   EXPLANATION: N/A
+
+### Task 3
+1. What is the command to open User Account Control Settings? (The .exe not the path)
+   **A: UserAccountControlSettings.exe**
+   EXPLANATION: search bar -> msconfig -> tools -> Change UAC Settings -> the last part in the command (piece with .exe)
+
+#### Task 4
+1. What is the command to open Computer Management? (.msc, not path)
+   **A: compmgmt.msc**
+   EXPLANATION: found in the system config tools tab
+2. When is the npcapwatchdog scheduled task set to run at?
    **A:**
    EXPLANATION:
-4. What command will open the control Panel? (the .exe not the full path)
+3. What is the name of the hidden folder that is shared?
    **A:**
    EXPLANATION:
