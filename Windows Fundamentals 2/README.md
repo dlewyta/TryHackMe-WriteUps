@@ -43,7 +43,7 @@
 - You can find the current level by looking in the **User Account Control Settings** window
 
 ## Computer Management
-- user **compmgmt** to access the Computer Management panel
+- use **compmgmt** to access the Computer Management panel
 #### System Tools
 - view scehduled tasks by clicking on **Task Scheduler Library**
 - Event viewer lets us view events that have occured on the computer
@@ -62,12 +62,31 @@
 - additional detail found in **properties** (right-click)
 
 ## System Information
+- the System Information (msinfo32) tool gathers information about your computer and displays a comprehensive view of your hardware, system components, and software environments
+- Msinfo32 can be used to diagnore computer issues
+- the **system summary** section is divided into 3 parts: Hardware Resources, Components, Software Environment
+
+### Components
+- shows specific information about the hardware devices installed on the computer
+
+### Software Environment
+- you can see information about software baked into the OS and software you have installed
 
 ## Resource Monitor
+- Resource Monitor displays information about CPU, memory, disk, and netword usage
+- has four sections:
+  1. CPU
+  2. Disk
+  3. Network
+  4. Memory
 
 ## Command Prompt
-
-## Registry Editor
+- the **hostname** command will output the computer name
+- the **whoami** command will output the name of the logged in user
+- the **ipconfig** command shows the network address settings for the computer (you can use **ipconfig/all** for detailed information)
+- the **netstat** command displays protocol status and current TCP/IP network connections
+- the **net** command supports sub-commands and is used to manage network resources
+- use a command followed by /? for a manual page **EX: ipconfig /?**
 
 ## Answers to Questions
 ### Task 2
@@ -89,13 +108,42 @@
    **A: UserAccountControlSettings.exe**
    EXPLANATION: search bar -> msconfig -> tools -> Change UAC Settings -> the last part in the command (piece with .exe)
 
-#### Task 4
+### Task 4
 1. What is the command to open Computer Management? (.msc, not path)
    **A: compmgmt.msc**
    EXPLANATION: found in the system config tools tab
 2. When is the npcapwatchdog scheduled task set to run at?
-   **A:**
-   EXPLANATION:
+   **A: at system startup**
+   EXPLANATION: search bar -> compmgmt -> task scheduler -> active tasks -> npcapwatchdog
 3. What is the name of the hidden folder that is shared?
-   **A:**
+   **A: sh4r3dF0ld3r**
+   EXPLANATION: compmgmt -> system tools -> shared folders -> shares -> sh4r3dF0ld3r
+
+### Task 5
+1. What is the command to open System Information? (.exe not full path)
+   **A: msinfo32.exe**
+   EXPLANATION: N/A
+2. What is listed under System Name?
+   **A: THM-WINFUN2**
+   EXPLANATION: search bar -> msinfo32 -> system summary
+3. Under Environment Variables, what is the value for ComSpec?
+   **A: %SystemRoot%\system32\cmd.exe**
+   EXPLANATION: msinfo32 -> Software environment -> environment variables -> ComSpec
+
+### Task 6
+1. What is the command to open Resource Monitor? (.exe not full path)
+   **A: resmon.exe**
+   EXPLANATION: N/A
+
+### Task 7
+1. In System Configuration, what is the full command for Internet Protocol Configuration
+   **A: C:\Windows\System32\cms.exe /k %windir%\system32\ipconfig.exe**
+   EXPLANATION: N/A
+2. For the ipconfig command, how do you show detailed information?
+   **A: **
    EXPLANATION:
+
+### Task 8
+1. What is the command to open the Registry Editor? (.exe not full path)
+   **A: regedt32.exe**
+   EXPLANATION: N/A
