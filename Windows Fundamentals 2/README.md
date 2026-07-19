@@ -140,8 +140,8 @@
    **A: C:\Windows\System32\cms.exe /k %windir%\system32\ipconfig.exe**
    EXPLANATION: N/A
 2. For the ipconfig command, how do you show detailed information?
-   **A: **
-   EXPLANATION:
+   **A: ipconfig/all**
+   EXPLANATION: N/A
 
 ### Task 8
 1. What is the command to open the Registry Editor? (.exe not full path)
